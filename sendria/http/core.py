@@ -256,7 +256,7 @@ def configure_assets(debug: bool, autobuild: bool) -> webassets.Environment:
         'js/util.js', 'js/message.js', 'js/sendria.js',
         filters='rjsmin', output='assets/bundle.%(version)s.js')
     scss = webassets.Bundle('css/sendria.scss',
-        filters='libsass', output='assets/sendria.%(version)s.css')
+        filters='pyscss', output='assets/sendria.%(version)s.css')
     css = webassets.Bundle('css/reset.css', 'css/jquery-ui.css', scss,
         filters=('cssrewrite', 'cssmin'), output='assets/bundle.%(version)s.css')
 
