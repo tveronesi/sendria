@@ -5,7 +5,6 @@ ARG VERSION=2.2.2
 
 RUN addgroup -S sendria && adduser -S sendria -G sendria
 
-RUN apk add --no-cache bash
 WORKDIR /home/sendria
 USER sendria
 
